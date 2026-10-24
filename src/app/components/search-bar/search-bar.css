@@ -1,0 +1,132 @@
+.container {
+  margin: 30px auto;
+  padding: 8px 14px;
+  width: 90%;
+  max-width: 420px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(36, 26, 51, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(36, 26, 51, 0.06);
+}
+
+input {
+  all: unset;
+  flex: 1;
+  font-weight: bold;
+  color: var(--text);
+}
+
+fa-icon {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+label {
+  color: rgb(143, 32, 113);
+  font-weight: bold;
+}
+:host {
+  --bg: #f6f3fa;
+  --text: #241a33;
+  --muted: #6b6480;
+  --accent-1: #b62095;
+  --accent-2: #6d28d9;
+
+  display: flow-root;
+  background: var(--bg);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.auto-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.auto-card:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+  border-color: rgba(182, 32, 149, 0.55);
+  box-shadow: 0 16px 36px rgba(182, 32, 149, 0.25);
+}
+
+.auto-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #23273f;
+  transition: transform 0.4s ease;
+}
+
+.auto-card:hover img {
+  transform: scale(1.04);
+}
+
+.details {
+  padding: 18px 20px 22px;
+}
+
+.details h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  color: var(--text);
+  letter-spacing: 0.3px;
+}
+
+.details p {
+  margin: 0;
+  line-height: 1.8;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.see-more {
+  margin-top: 16px;
+}
+
+.see-more button {
+  width: 100%;
+  padding: 11px 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.see-more button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+  box-shadow: 0 8px 18px rgba(182, 32, 149, 0.4);
+}
+
+.see-more button:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,6 @@
+<app-head-bar></app-head-bar>
+<app-search-bar [autos]="autoList" (seeMore)="selectedAuto = $event"></app-search-bar>
+
+@if (selectedAuto) {
+  <app-auto-details [auto]="selectedAuto" (closed)="selectedAuto = null"></app-auto-details>
+}

@@ -1,0 +1,20 @@
+<div class="overlay" (click)="closed.emit()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <button class="close" type="button" (click)="closed.emit()">✕</button>
+
+    <img src="images/{{ auto.photo }}" alt="{{ auto.brand }} {{ auto.model }}" />
+
+    <h2>{{ auto.brand }}</h2>
+    <p class="model">Model : {{ auto.model }}</p>
+
+    <p class="description">
+      {{ auto.description ?? 'No description available.' }}
+    </p>
+
+    <div class="infos">
+      <span>Power : {{ auto.power }}</span>
+      <span>Price : {{ auto.price }} DNT</span>
+      <span>Stock : {{ auto.availability }}</span>
+    </div>
+  </div>
+</div>

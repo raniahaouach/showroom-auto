@@ -1,0 +1,12 @@
+<div class="container">
+  <input type="text" #brand placeholder="Brand" (input)="selectAutos(brand.value)" />
+  <fa-icon [icon]="faMagnifyingGlass" (click)="selectAutos(brand.value)"></fa-icon>
+</div>
+
+@let list = brand.value ? selectedAutos : autos;
+
+<div class="cars-container">
+  @for (auto of list; track auto.id) {
+    <app-auto-card [auto]="auto" (seeMore)="seeMore.emit($event)"></app-auto-card>
+  }
+</div>
